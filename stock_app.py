@@ -112,7 +112,7 @@ class StockApp(tk.Tk):
                 "change": f"{change:.2f} ({change_percent:.2f}%)" if isinstance(change, (int, float)) else change,
                 "market_cap": f"{info.get('marketCap', 'N/A'):,}",
                 "pe_ratio": f"{info.get('trailingPE', 'N/A'):.2f}" if isinstance(info.get('trailingPE'), (int, float)) else info.get('trailingPE', 'N/A'),
-                "dividend_yield": f"{info.get('dividendYield', 0) * 100:.2f}%",
+                "dividend_yield": f"{info.get('dividendYield', 0):.2%}",
                 "beta": f"{info.get('beta', 'N/A'):.2f}" if isinstance(info.get('beta'), (int, float)) else info.get('beta', 'N/A'),
                 "eps": f"{info.get('trailingEps', 'N/A'):.2f}" if isinstance(info.get('trailingEps'), (int, float)) else info.get('trailingEps', 'N/A'),
                 "price_to_book": f"{info.get('priceToBook', 'N/A'):.2f}" if isinstance(info.get('priceToBook'), (int, float)) else info.get('priceToBook', 'N/A'),

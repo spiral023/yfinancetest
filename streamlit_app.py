@@ -39,7 +39,7 @@ with tab1:
             with metrics_col1:
                 st.metric("KGV (TTM)", f"{info.get('trailingPE', 'N/A'):.2f}")
                 st.metric(
-                    "Dividendenrendite", f"{info.get('dividendYield', 0) * 100:.2f}%"
+                    "Dividendenrendite", f"{info.get('dividendYield', 0):.2f}%"
                 )
             with metrics_col2:
                 st.metric("Beta", f"{info.get('beta', 'N/A'):.2f}")
@@ -139,7 +139,7 @@ with tab2:
                             "Branche": info.get("industry", "N/A"),
                             "Land": info.get("country", "N/A"),
                             "KGV (TTM)": f"{info.get('trailingPE', 'N/A'):.2f}",
-                            "Dividendenrendite (%)": f"{info.get('dividendYield', 0) * 100:.2f}",
+                            "Dividendenrendite (%)": f"{info.get('dividendYield', 0):.2f}",
                         }
                     )
                 except Exception as e:
